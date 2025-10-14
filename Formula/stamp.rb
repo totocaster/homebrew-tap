@@ -1,26 +1,26 @@
 class Stamp < Formula
   desc "A simple Go CLI tool for generating note filenames based on date/time"
   homepage "https://github.com/totocaster/stamp"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   # For macOS
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/totocaster/stamp/releases/download/v0.1.0/stamp_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "TO_BE_UPDATED_BY_GORELEASER"
+      url "https://github.com/totocaster/stamp/releases/download/v0.1.1/stamp_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "d6d0bb405d5143e8d316485eb13bbe6d36bb453d81e4d93b0646d9cf68773ee6"
     else
-      url "https://github.com/totocaster/stamp/releases/download/v0.1.0/stamp_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "TO_BE_UPDATED_BY_GORELEASER"
+      url "https://github.com/totocaster/stamp/releases/download/v0.1.1/stamp_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "fb98c97739aeb3a8ea0afa8e76acebce416857fda4c34b7f84e65874501f6e9f"
     end
   # For Linux
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/totocaster/stamp/releases/download/v0.1.0/stamp_0.1.0_Linux_arm64.tar.gz"
-      sha256 "TO_BE_UPDATED_BY_GORELEASER"
+      url "https://github.com/totocaster/stamp/releases/download/v0.1.1/stamp_0.1.1_Linux_arm64.tar.gz"
+      sha256 "e87df11ee39648f6f3ef5293adc01213cadbc2dcb13f501fdabcb535bf5e9829"
     else
-      url "https://github.com/totocaster/stamp/releases/download/v0.1.0/stamp_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "TO_BE_UPDATED_BY_GORELEASER"
+      url "https://github.com/totocaster/stamp/releases/download/v0.1.1/stamp_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "6c3bde5d4a3e99faadfba04e865489f83676bcb7db754c9e9cee6a34ec4b0c26"
     end
   end
 
@@ -33,11 +33,6 @@ class Stamp < Formula
 
     # Create the nid symlink
     bin.install_symlink "stamp" => "nid"
-
-    # Optional: Install shell completions if they exist
-    # bash_completion.install "completions/stamp.bash" if File.exist?("completions/stamp.bash")
-    # fish_completion.install "completions/stamp.fish" if File.exist?("completions/stamp.fish")
-    # zsh_completion.install "completions/_stamp" if File.exist?("completions/_stamp")
   end
 
   test do
