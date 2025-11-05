@@ -1,5 +1,5 @@
 class Arrowhead < Formula
-  desc "Fast Obsidian search and discovery CLI"
+  desc "Fast Obsidian search and discovery CLI and daemon"
   homepage "https://github.com/totocaster/arrowhead"
   version "0.7.0"
   license "MIT"
@@ -18,10 +18,14 @@ class Arrowhead < Formula
 
   def install
     bin.install "bin/arrowhead"
+    bin.install "bin/arrowheadd"
   end
 
   test do
     output = shell_output("#{bin}/arrowhead --help")
     assert_match "arrowhead", output
+
+    daemon_output = shell_output("#{bin}/arrowheadd --help")
+    assert_match "arrowheadd", daemon_output
   end
 end
