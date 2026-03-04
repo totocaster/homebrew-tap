@@ -5,25 +5,25 @@
 class Whoopy < Formula
   desc "Unofficial WHOOP data CLI written in Go"
   homepage "https://github.com/totocaster/whoopy"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/totocaster/whoopy/releases/download/v0.1.0/whoopy_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "9c3c07b7181a1cd141512752242ae09f6d9f475c242c1102456eb80b15cfdfb2"
+      url "https://github.com/totocaster/whoopy/releases/download/v0.2.0/whoopy_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "a38a1d713a5a87792b305208abefd6ba12cf06d17e7365d0e98e6c267afd8ff5"
 
-      def install
+      define_method(:install) do
         bin.install "whoopy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/totocaster/whoopy/releases/download/v0.1.0/whoopy_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "d63cde9e162253b32fc131bc15a82c7ef3df69559925bb4cdd2e173b5c2deec7"
+      url "https://github.com/totocaster/whoopy/releases/download/v0.2.0/whoopy_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "9f1a14b5903b2860304ca2b08de5b79c64f04d38a70df79984513b50f02f22a2"
 
-      def install
+      define_method(:install) do
         bin.install "whoopy"
       end
     end
@@ -31,18 +31,16 @@ class Whoopy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/totocaster/whoopy/releases/download/v0.1.0/whoopy_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "f1e641ad096227fe8b5c693307202992560c6374873e58d8ee17c0e773cdfaa7"
-
-      def install
+      url "https://github.com/totocaster/whoopy/releases/download/v0.2.0/whoopy_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "9d452235a53e10abb554d5da81fee96146f4e4f533e8075aead864ffd5e67e16"
+      define_method(:install) do
         bin.install "whoopy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/totocaster/whoopy/releases/download/v0.1.0/whoopy_0.1.0_Linux_arm64.tar.gz"
-      sha256 "aba3fdb5b8e4c6ac597628b10090ddf1bbf6a7be783eece0a7947c4c73c5f029"
-
-      def install
+      url "https://github.com/totocaster/whoopy/releases/download/v0.2.0/whoopy_0.2.0_Linux_arm64.tar.gz"
+      sha256 "e85514889171df7971d8be96c62b63dd9b6ce527284ae11f9300b6779395c43f"
+      define_method(:install) do
         bin.install "whoopy"
       end
     end
@@ -50,6 +48,6 @@ class Whoopy < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/whoopy --version")
-    assert_match "whoopy profile", shell_output("#{bin}/whoopy --help")
+    assert_match "profile", shell_output("#{bin}/whoopy --help")
   end
 end
