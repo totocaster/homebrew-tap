@@ -13,7 +13,7 @@ class Whoopy < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/totocaster/whoopy/releases/download/v0.1.0/whoopy_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "288f098a295071ad7a487f0f2ecaf49e56f0d7e1af2abda47014b79584883e40"
+      sha256 "9c3c07b7181a1cd141512752242ae09f6d9f475c242c1102456eb80b15cfdfb2"
 
       define_method(:install) do
         bin.install "whoopy"
@@ -21,7 +21,7 @@ class Whoopy < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/totocaster/whoopy/releases/download/v0.1.0/whoopy_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "09c9ceaa924c067c04a2d5136d2c988a4994cdaa73f7382ed13ab1fe94e6a9df"
+      sha256 "d63cde9e162253b32fc131bc15a82c7ef3df69559925bb4cdd2e173b5c2deec7"
 
       define_method(:install) do
         bin.install "whoopy"
@@ -32,14 +32,14 @@ class Whoopy < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/totocaster/whoopy/releases/download/v0.1.0/whoopy_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "3409a8b26721ad435acd1d3438b38c6e0380ee5e8dadfe1842dea206579d2f6b"
+      sha256 "f1e641ad096227fe8b5c693307202992560c6374873e58d8ee17c0e773cdfaa7"
       define_method(:install) do
         bin.install "whoopy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/totocaster/whoopy/releases/download/v0.1.0/whoopy_0.1.0_Linux_arm64.tar.gz"
-      sha256 "b16a4d1d702ce23967b218bfe8ed4e8475c4e17ac6de8967032197a6688fa3b6"
+      sha256 "aba3fdb5b8e4c6ac597628b10090ddf1bbf6a7be783eece0a7947c4c73c5f029"
       define_method(:install) do
         bin.install "whoopy"
       end
