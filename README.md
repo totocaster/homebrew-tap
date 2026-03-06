@@ -12,6 +12,20 @@ brew tap totocaster/tap
 
 ## Available Formulas
 
+### withingy
+
+Unofficial Withings data CLI written in Go.
+
+#### Installation
+
+```bash
+brew install --HEAD totocaster/tap/withingy
+```
+
+Until the first tagged release is published, this formula is HEAD-only and
+builds from the current `main` branch of `totocaster/withingy`. After the
+first release, plain `brew install withingy` will work.
+
 ### stamp
 
 A simple Go CLI tool for generating note filenames based on date/time.
