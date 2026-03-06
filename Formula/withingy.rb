@@ -5,21 +5,21 @@
 class Withingy < Formula
   desc "Unofficial Withings data CLI written in Go"
   homepage "https://github.com/totocaster/withingy"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/totocaster/withingy/releases/download/v0.2.0/withingy_0.2.0_Darwin_x86_64.tar.gz"
-      sha256 "ee246adfec731676c1deaac67f632738e3bf220d61b74ac28bc26efff4367f5b"
+      url "https://github.com/totocaster/withingy/releases/download/v0.3.0/withingy_0.3.0_Darwin_x86_64.tar.gz"
+      sha256 "a28f3a59d5e2a1df952afff1cea22d49023f06d7334f658f9580a3aa8766dbf0"
 
       define_method(:install) do
         bin.install "withingy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/totocaster/withingy/releases/download/v0.2.0/withingy_0.2.0_Darwin_arm64.tar.gz"
-      sha256 "fa364f191705a974993902d9502fa6c3bffdf63288a888672ee006ef31073e9d"
+      url "https://github.com/totocaster/withingy/releases/download/v0.3.0/withingy_0.3.0_Darwin_arm64.tar.gz"
+      sha256 "cd65f185e84cb1ca88523dc2c19a8fab54c0829d2d41426085bea05122b52d7e"
 
       define_method(:install) do
         bin.install "withingy"
@@ -29,15 +29,15 @@ class Withingy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/totocaster/withingy/releases/download/v0.2.0/withingy_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "b8016195d5018767f94b9a249992fef600987a7552f5eb1aff8ccd357e522415"
+      url "https://github.com/totocaster/withingy/releases/download/v0.3.0/withingy_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "78f601c079b0091d583b17f52f5b5583d8076ea51c1af824fe591814beb7051b"
       define_method(:install) do
         bin.install "withingy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/totocaster/withingy/releases/download/v0.2.0/withingy_0.2.0_Linux_arm64.tar.gz"
-      sha256 "fedeb4203c37298b46bb412d2c6fac131dc5b76fd757a73c2e95b77cf39562e6"
+      url "https://github.com/totocaster/withingy/releases/download/v0.3.0/withingy_0.3.0_Linux_arm64.tar.gz"
+      sha256 "5d146852d0a128ba17f3096347a55b30a32548e5ac6cec27e78effc027aeb1fe"
       define_method(:install) do
         bin.install "withingy"
       end
