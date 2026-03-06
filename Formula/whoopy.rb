@@ -5,23 +5,23 @@
 class Whoopy < Formula
   desc "Unofficial WHOOP data CLI written in Go"
   homepage "https://github.com/totocaster/whoopy"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/totocaster/whoopy/releases/download/v0.2.0/whoopy_0.2.0_Darwin_x86_64.tar.gz"
-      sha256 "a38a1d713a5a87792b305208abefd6ba12cf06d17e7365d0e98e6c267afd8ff5"
+      url "https://github.com/totocaster/whoopy/releases/download/v0.3.0/whoopy_0.3.0_Darwin_x86_64.tar.gz"
+      sha256 "9907b874eeffe778efba2fde701e2902886cf74676dd857a9fc71d1ee73da032"
 
       define_method(:install) do
         bin.install "whoopy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/totocaster/whoopy/releases/download/v0.2.0/whoopy_0.2.0_Darwin_arm64.tar.gz"
-      sha256 "9f1a14b5903b2860304ca2b08de5b79c64f04d38a70df79984513b50f02f22a2"
+      url "https://github.com/totocaster/whoopy/releases/download/v0.3.0/whoopy_0.3.0_Darwin_arm64.tar.gz"
+      sha256 "5482501ddbb32e7add9465913ed2abb9f68b64e37fae744118022dda7d71c57f"
 
       define_method(:install) do
         bin.install "whoopy"
@@ -31,15 +31,15 @@ class Whoopy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/totocaster/whoopy/releases/download/v0.2.0/whoopy_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "9d452235a53e10abb554d5da81fee96146f4e4f533e8075aead864ffd5e67e16"
+      url "https://github.com/totocaster/whoopy/releases/download/v0.3.0/whoopy_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "6effbf5347295a2c484634febdca40775f8e806001adb7795c7f14161d027c4f"
       define_method(:install) do
         bin.install "whoopy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/totocaster/whoopy/releases/download/v0.2.0/whoopy_0.2.0_Linux_arm64.tar.gz"
-      sha256 "e85514889171df7971d8be96c62b63dd9b6ce527284ae11f9300b6779395c43f"
+      url "https://github.com/totocaster/whoopy/releases/download/v0.3.0/whoopy_0.3.0_Linux_arm64.tar.gz"
+      sha256 "50871a5ed69147e5f8f9c3e41cbba03169045f73e84f1503a7486874accc84a4"
       define_method(:install) do
         bin.install "whoopy"
       end
