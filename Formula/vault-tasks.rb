@@ -5,21 +5,21 @@
 class VaultTasks < Formula
   desc "Companion CLI for the Vault Tasks Obsidian plugin"
   homepage "https://github.com/totocaster/vault-tasks-obsidian-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/totocaster/vault-tasks-obsidian-cli/releases/download/v0.1.0/vault-tasks_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "b3aa7ca7086b2c2dbccbf95685d489cd992d1ddb5f4204ceab034df296b5bd63"
+      url "https://github.com/totocaster/vault-tasks-obsidian-cli/releases/download/v0.1.1/vault-tasks_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "95832af45a41ca5080a922b98f18d0a744a728e4c2d4515a8dbf6a054d941b80"
 
       define_method(:install) do
         bin.install "vault-tasks"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/totocaster/vault-tasks-obsidian-cli/releases/download/v0.1.0/vault-tasks_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "942ea2d106e48a30234971ba413657a43c0f3b09a1c29316a3fbd222c9312628"
+      url "https://github.com/totocaster/vault-tasks-obsidian-cli/releases/download/v0.1.1/vault-tasks_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "a85a13246500ece232b4b30d29fde7561541f000b5acb2f403410473add193b7"
 
       define_method(:install) do
         bin.install "vault-tasks"
@@ -29,15 +29,15 @@ class VaultTasks < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/totocaster/vault-tasks-obsidian-cli/releases/download/v0.1.0/vault-tasks_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "c62d055b729cfd78965feb44e7eafab65575b1b7062d8ddd5901f94daf2e0f0b"
+      url "https://github.com/totocaster/vault-tasks-obsidian-cli/releases/download/v0.1.1/vault-tasks_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "bcb71187cf65ca58718de7aa36ddcd8f43bd9602afde79dd6c8b05d5589b07f6"
       define_method(:install) do
         bin.install "vault-tasks"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/totocaster/vault-tasks-obsidian-cli/releases/download/v0.1.0/vault-tasks_0.1.0_Linux_arm64.tar.gz"
-      sha256 "be0acfa11f46f9e06e31991b3efe7c26888e17d872a5187dc99556bb6358fb66"
+      url "https://github.com/totocaster/vault-tasks-obsidian-cli/releases/download/v0.1.1/vault-tasks_0.1.1_Linux_arm64.tar.gz"
+      sha256 "ec86e6e22f3039285c0cc55bc464a6c5328b47c64d21e1466046217b1948cc69"
       define_method(:install) do
         bin.install "vault-tasks"
       end
