@@ -4,11 +4,11 @@ cask "th" do
 
   on_macos do
     on_intel do
-      sha256 "3b0a115cb7d79f94ad16319498b7ed37d53524af7c6388f5b3f347ad794c71cc"
+      sha256 "606fc67ee5665605d0b72262071bae0fdc5ca381fba70f70ad39950eb0e9a9ef"
       url "https://github.com/totocaster/things-cli-go/releases/download/v#{version}/th_#{version}_Darwin_x86_64.tar.gz"
     end
     on_arm do
-      sha256 "d8ec9b39d1f65f572d2d717c7c24988ff0407d60bbd2874992b039981af3db1d"
+      sha256 "611419ccc710dc02a29d844ad9aa4a977cd716d31585ee5913a73c40fd25e4cf"
       url "https://github.com/totocaster/things-cli-go/releases/download/v#{version}/th_#{version}_Darwin_arm64.tar.gz"
     end
   end
