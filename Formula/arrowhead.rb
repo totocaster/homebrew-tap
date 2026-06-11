@@ -1,18 +1,18 @@
 class Arrowhead < Formula
   desc "Fast Obsidian search and discovery CLI and daemon"
   homepage "https://github.com/totocaster/arrowhead"
-  version "0.11.0"
+  version "0.11.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/totocaster/arrowhead/releases/download/v0.11.0/arrowhead-0.11.0-aarch64-apple-darwin.tar.gz"
-      sha256 "cf4f7627a054738d3d0a52aedc32b1424a6599cdfa3e2586ade622acc3fc95d1"
+      url "https://github.com/totocaster/arrowhead/releases/download/v0.11.1/arrowhead-0.11.1-aarch64-apple-darwin.tar.gz"
+      sha256 "803fb7ae40ea56b88b83df731022c61baba0f8c6ea7c02e0c2c87e2f75787963"
     end
 
     on_intel do
-      url "https://github.com/totocaster/arrowhead/releases/download/v0.11.0/arrowhead-0.11.0-x86_64-apple-darwin.tar.gz"
-      sha256 "7067d66a2a322ca7ee2a14c777bb90b5a3207d76eb4ccc12d3c6ce4ffa4ea8be"
+      url "https://github.com/totocaster/arrowhead/releases/download/v0.11.1/arrowhead-0.11.1-x86_64-apple-darwin.tar.gz"
+      sha256 "c088a907434680220bed14d78998ec77f54a600535db463d695518fe6c526685"
     end
   end
 
