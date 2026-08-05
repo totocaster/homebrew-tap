@@ -6,7 +6,6 @@ class Refmode < Formula
   desc "List and switch Apple display reference modes"
   homepage "https://github.com/totocaster/refmode"
   url "https://github.com/totocaster/refmode/releases/download/v1.0.0/refmode-1.0.0-aarch64-apple-darwin.tar.gz"
-  version "1.0.0"
   sha256 "d6ce2cd0cdf3a939238fe6b3a01808a3e18ce8a5d7f94a429488a1d33dabd1f7"
   license "MIT"
 
